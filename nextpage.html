@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <title>Family Tree</title>
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                text-align: center;
+                background-color: #f2f2f2;
+                color: #333;
+                margin-left: 7%;
+                margin-right: 7%;
+                overflow: auto;
+            }
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('https://i.ibb.co/J73XmBZ/7430-F087-EC9-B-4-FAA-BA2-B-B04-B312-DBAB4.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0.2;
+                z-index: -1;
+                background-attachment: fixed;
+            }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-family: 'Poppins', sans-serif;
+                color: #555;
+                margin: 20px 0;
+                font-weight: 600;
+            }
+            .family-tree {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 50px;
+            }
+            .family-tree .parent, .family-tree .children {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+            }
+            .family-tree .parent div, .family-tree .children div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 20px;
+                transition: transform 0.3s ease;
+            }
+            .family-tree .parent div:hover, .family-tree .children div:hover {
+                transform: scale(1.1);
+            }
+            .family-tree .parent div .circle, .family-tree .children div .circle {
+                width: 120px;
+                height: 120px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ff4081;
+                color: white;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                font-size: 18px;
+                overflow: hidden; /* Ensure the image fits within the circle */
+            }
+            .family-tree .parent div .circle img, .family-tree .children div .circle img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensure the image covers the entire circle */
+                border-radius: 50%; /* Ensure the image itself is circular */
+            }
+            .family-tree .children {
+                flex-wrap: wrap;
+            }
+            p {
+                margin: 0;
+                font-size: 16px;
+                color: #666;
+            }
+            .home-button {
+                margin-top: 20px;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white;
+                background-color: #ff4081;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: background-color 0.3s ease;
+            }
+            .home-button:hover {
+                background-color: #e0356b;
+            }
+            @media (max-width: 600px) {
+                .family-tree .parent, .family-tree .children {
+                    flex-direction: column;
+                }
+                .family-tree .parent div, .family-tree .children div {
+                    margin-bottom: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>♡.﹀﹀﹀﹀.♡ ° ♡ • ➵ ✩ ◛ ° ♡.﹀﹀﹀﹀.♡</h1>
+        <h1>ครอบครัวฉุกฉันนนน</h1>
+        <div class="family-tree">
+            <div class="parent">
+                <div>
+                    <div class="circle">
+                        <img src="https://i.ibb.co/bKjJSj3/papa.jpg" alt="papa">
+                    </div>
+                    <p>ปะป๊าา</p>
+                </div>
+                <div>
+                    <div class="circle">
+                        <img src="https://i.ibb.co/ZWb3ySG/mamiee.jpg" alt="mamiee">
+                    </div>
+                    <p>มะมี๊</p>
+                </div>
+            </div>
+            <div class="children">
+                <div>
+                    <div class="circle">
+                        <img src="https://i.ibb.co/Bq2Tk4K/janggie.jpg" alt="janggie">
+                    </div>
+                    <p>เบบี้จั๊งง</p>
+                </div>
+                <div>
+                    <div class="circle">
+                        <img src="https://i.ibb.co/12CxDMy/jasmine.jpg" alt="jasmine">
+                    </div>
+                    <p>จัสมินนนนนนน</p>
+                </div>
+                <div>
+                    <div class="circle">
+                        <img src="https://i.ibb.co/wzskj0s/jinny.jpg" alt="jinny">
+                    </div>
+                    <p>พี่จินนนนน</p>
+                </div>
+                <div>
+                    <div class="circle">
+                        <img src="https://i.ibb.co/ZS2Jgbd/jerry.jpg" alt="jerry">
+                    </div>
+                    <p>พี่เจอรี่</p>
+                </div>
+                <div>
+                    <div class="circle">
+                        <img src="https://i.ibb.co/KqyWnwD/jiwlew.jpg" alt="jiwlew">
+                    </div>
+                    <p>พี่จิ๋วหลิว</p>
+                </div>
+                <div>
+                    <div class="circle">
+                        <img src="https://i.ibb.co/gZXs6xV/fish.png" alt="fish">
+                    </div>
+                    <p>พี่ปุ๋งๆปิ๋งๆ</p>
+                </div>
+            </div>
+        </div>
+        <h1>ปะป๊ารักๆเบบี๋ที่สุดเลยนาา ปะป๊าชอบไปเที่ยวกับเบบี๋มากๆ ชอบๆการใช้ชีวิตในแต่ละวันสนุกๆด้วยกันกับเบบี๋ เบบี๋ทำให้ปะป๊าเปิดโลกมากขึ้น ได้ไปเที่ยวไกลๆถึงเชียงใหม่</h1>
+        <h1>ทริปเชียงใหม่ปะป๊าพูดไปหลายๆที่แล้วในแต่ละโมเม้น</h1>
+        <h1>ปะป๊าเลยอยากจะมาพูดถึงวันสุดท้ายกันดีกว่า คือวันที่เราไปหาพี่แกะะ</h1>
+        <h1>วันนั้นเป็นอีกวันที่่เป็นโมเม้นดีๆ ที่ได้ใช้ชีวิตแบบเที่ยวที่น่าขับรถไปกันบ่อยๆ เหมือนเป็นวันที่ผ่อนคลาย ได้ไปคาเฟ่ แล้วเป็นอีกวันที่แพลนเราหากันสดๆเลย ซึ่งเป็นวันปิดทริปเชียงใหม่ที่ดีมากๆเลยย</h1>
+        <h1>โดยรวมๆจากที่ผ่านมา 1 ปี ปะป๊ารู้สึกได้ใช้ชีวิตได้สนุกขึ้นมาก ได้ทำอะไรใหม่ๆด้วยกัน ไม่ว่าจะเป็นโมเม้นการนั่งรถไป โมเม้นการไปเที่ยว โมเม้นการไปตั้งแค้มม ทุกอย่างสนุกมากๆเลยนาาา ปะป๊าชอบๆที่สุดเลยยย</h1>
+        <h1>ปะป๊าอยู่ๆคอยช่วยกันดูแลกันและกัน ดูแลพี่เด็กตลอดๆเสมอเลยนาาาา</h1>
+        <h1>รักเบบี๋ที่สุดเลยนะคั้บบบ จุ้บบบบบบบบบ</h1>
+        <button class="home-button" onclick="window.location.href='index.html'">Home</button>
+    </body>
+</html>
